@@ -1,0 +1,298 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Adult Day Program</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Staff Schedules Modal Begin -->
+    <div class="reveal tiny" id="clientHistory" data-reveal>
+      <div class="header">
+        <h2>Client History</h2>
+      </div>
+      <form>
+        <div class="grid-container body">
+          <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+              <div class="grid-x">
+                <div class="large-6 cell">
+                  <p class="lead">Alex Kerkovich</p>
+                </div>
+                <div class="large-6 cell">
+                  <p class=""></p>
+                </div>
+              </div>
+              <div class="grid-x">
+                <div class="large-12 cell">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Staff Name</th>
+                        <th>Date Started</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Jerome Bautista de Joya</td>
+                        <td>4/10/2018
+                      </tr>
+                      <tr>
+                        <td>Bianca Baquirin</td>
+                        <td>4/1/2018
+                      </tr>
+                      <tr>
+                        <td>Monica Abelardo</td>
+                        <td>3/23-2018</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <!-- Staff Shedules Modal End -->
+
+  </head>
+
+ <body id="adminManagement" class="app panels-layout">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="medium-1 cell">
+        <div class="sidebar">
+          <div class="header">
+            <img src="assets/logo.white.png">
+          </div>
+          <ul class="vertical menu">
+            <li><a class="staff" href="admin-staff.html" class="staff">Staff</a></li>
+            <li><a href="admin-client.html" class="client">Client</a></li>
+            <li><a class="active assign" href="#">Staff-Client</a></li>
+            <li><a class="medication" href="admin-medications.html"">Medication</a></li>
+          </ul>
+           <ul class="vertical menu logout">
+            <li><a href="#" class="out">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="medium-11 cell sec-nav full-height">
+        <div class="user">
+          <p>Welcome, <span>Bianca!</span><img src="https://pbs.twimg.com/profile_images/2325809302/bkm0xkf5hz3huqk6pfb3.png">
+        </div>
+        <div class="grid-container">
+          <div class="menu">
+            <div class="grid-x" style="width: 102%;">
+              <div class="medium-12 cell" >
+                <ul class="menu">
+                  <li>
+                    <div class="button-group">
+                      <button class="dropdown button secondary" style="margin: 0px;" type="button" data-toggle="example-dropdown-1">Arrange By</button>
+                      <div class="dropdown-pane small" id="example-dropdown-1" data-dropdown data-hover="true" data-hover-pane="true">
+                        <a href="#">Most Recent</a>
+                        <a href="#">First Name</a>
+                        <a href="#">Last Name</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="input-group">
+                      <input class="input-group-field" type="text" placeholder="Search By Name">
+                      <div class="input-group-button">
+                        <input type="submit" class="button" value="Search">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-container content">
+          <div class="grid-x grid-padding-x">
+            <div class="large-8 cell">
+              <div class="grid-x grid-margin-x medium-up-2">
+                <div class="cell">
+                  <div class="callout">
+                    <div class="grid-x padding">
+                      <div class="large-4 cell">
+                        <div class="profile-photo" style="background: url(https://goo.gl/LbDx4W")></div>
+                        <h2><span>Penny</span> <span>Hartz</span></h2>
+                        <br />
+                      </div>
+                      <div class="large-8 cell text-left">
+                        <p class="title">Assigned To Staff</p>
+                        <ol>
+                          <li class="current"><span>Monica Abelardo</span><a class="delete hide"><img src="assets/icons/delete.svg"></a></li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="grid-x padding">
+                      <div class="small-8 cell">
+                        <label>
+                          <input type="text" placeholder="[should autocomplete]">
+                        </label>
+                      </div>
+                      <div class="small-4 cell">
+                        <a href="#" class="button expanded">Assign</a>
+                      </div>
+                    </div>
+                    <div class="grid-x">
+                      <div class="large-12 cell">
+                        <a href="#" class="button expanded schedule" data-open="clientHistory">View History</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell">
+                  <div class="callout">
+                    <div class="grid-x padding">
+                      <div class="large-4 cell">
+                        <div class="profile-photo" style="background: url(https://goo.gl/CNjxWn")></div>
+                        <h2><span>Max Blum</span></h2>
+                        <br />
+                      </div>
+                      <div class="large-8 cell text-left">
+                        <p class="title">Assigned To Staff</p>
+                        <ol>
+                          <li class="current"><span class="none"></span><a class="delete hide"><img src="assets/icons/delete.svg"></a></li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="grid-x padding">
+                      <div class="small-8 cell">
+                        <label>
+                          <input type="text" placeholder="[should autocomplete]">
+                        </label>
+                      </div>
+                      <div class="small-4 cell">
+                        <a href="#" class="button expanded">Assign</a>
+                      </div>
+                    </div>
+                    <div class="grid-x">
+                      <div class="large-12 cell">
+                        <a href="#" class="button expanded schedule" data-open="clientHistory">View History</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell">
+                  <div class="callout">
+                    <div class="grid-x padding">
+                      <div class="large-4 cell">
+                        <div class="profile-photo" style="background: url(https://goo.gl/nkJ2ZC")></div>
+                        <h2><span>Alex Kerkovich</span></h2>
+                        <br />
+                      </div>
+                      <div class="large-8 cell text-left">
+                        <p class="title">Assigned To Staff</p>
+                        <ol>
+                          <li class="current"><span>Jerome de Joya</span></span><a class="delete"><img src="assets/icons/delete.svg"></a></li>
+                          <li>Bianca Baquirin<span class="date-assigned">4/10/18</span></li>
+                          <li>Monica Abesamis<span class="date-assigned">3/10/18</span></li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="grid-x padding">
+                      <div class="small-8 cell">
+                        <label>
+                          <input type="text" placeholder="[should autocomplete]">
+                        </label>
+                      </div>
+                      <div class="small-4 cell">
+                        <a href="#" class="button expanded">Assign</a>
+                      </div>
+                    </div>
+                    <div class="grid-x">
+                      <div class="large-12 cell">
+                        <a href="#" class="button expanded schedule" data-open="clientHistory">View History</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell">
+                  <div class="callout">
+                    <div class="grid-x padding">
+                      <div class="large-4 cell">
+                        <div class="profile-photo" style="background: url(https://goo.gl/fSzbG6")></div>
+                        <h2><span>Jane</span> <span>Williams</span></h2>
+                        <br />
+                      </div>
+                      <div class="large-8 cell text-left">
+                        <p class="title">Assigned To Staff</p>
+                        <ol>
+                          <li class="current"><span>Bianca Baquirin</span><a class="delete"><img src="assets/icons/delete.svg"></a></li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="grid-x padding">
+                      <div class="small-8 cell">
+                        <label>
+                          <input type="text" placeholder="[should autocomplete]">
+                        </label>
+                      </div>
+                      <div class="small-4 cell">
+                        <a href="#" class="button expanded">Assign</a>
+                      </div>
+                    </div>
+                    <div class="grid-x">
+                      <div class="large-12 cell">
+                        <a href="#" class="button expanded schedule" data-open="clientHistory">View History</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="large-4 cell">
+              <div class="grid-x">
+                <div class="large-12 cell">
+                  <ul class="callout vertical menu accordion-menu staff-client-list" data-accordion-menu>
+                    <li>
+                      <a href="#"><h2>Clients</h2></a>
+                      <ul class="menu vertical nested is-active">
+                        <li><span>Max Blum</span></li>
+                        <li class="assigned"><span>Alex Kerkovich</span></li>
+                        <li class="assigned"><span>Jane Williams</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="grid-x">
+                <div class="large-12 cell">
+                  <ul class="callout vertical menu accordion-menu staff-client-list" data-accordion-menu>
+                    <li>
+                      <a href="#"><h2>Staff</h2></a>
+                      <ul class="menu vertical nested">
+                        <li><span>Jerome de Joya</span></li>
+                        <li class="assigned"><span>Bianca Baquirin</span><span class="assigned-to"><span>Jane Willaims</span></li>
+                        <li class="assigned"><span>Monica Abesamis</span><span class="assigned-to"><span>Penny Hartz</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      $('app').height(window.innerHeight + 'px');
+    </script>
+
+  </body>
+</html>

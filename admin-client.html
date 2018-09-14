@@ -1,0 +1,752 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Adult Day Program</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Add Client Modal Begin -->
+    <div class="reveal" id="addClient" data-reveal>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="header">
+        <h2>Add New Client</h2>
+      </div>
+       <form>
+        <div class="grid-container body">
+          <div class="grid-x grid-padding-x">
+            <div class="large-4 cell"></div>
+              <div class="large-4 cell">
+                <img class="profile-photo" src="#"> 
+                <label for="exampleFileUpload" class="button expanded">Staff Photo</label>
+                <input type="file" id="exampleFileUpload" class="show-for-sr">
+              </div>
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="large-6 cell">
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>First Name
+                      <input class="is-invalid-input" type="text" placeholder="First Name">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Last Name
+                      <input type="text" placeholder="First Name">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Date Of Birth
+                      <input type="date" placeholder="Date Of Birth">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Sex</label>
+                    <input type="radio" name="sex" value="Male" id="sexMale" required><label for="sexMale">Male</label>
+                    <input type="radio" name="sex" value="Female" id="sexFemale"><label for="sexFemale">Female</label>
+                  </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="large-6 cell">
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Program Start Date
+                      <input type="date" placeholder="Program Start Date">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Service Coordinator 
+                      <input type="text" placeholder="Service Coordinator">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Allergies
+                      <textarea type="text" placeholder="Allergies" style="height: 95px;"></textarea>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="large-6 cell">
+                <label>Diet
+                  <input type="text" placeholder="Diet">
+                </label>
+              </div>
+              <div class="large-6 cell">
+                <label>Diagnosis
+                  <input type="text" placeholder="Diagnosis">
+                </label>
+              </div> 
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="large-6 cell">
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Medical Record Numbe
+                      <input type="text" placeholder="Medical Record Numbe">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Facility Name
+                      <input type="text" placeholder="Facility Name">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Legend
+                      <select>
+                        <option>Select</option>
+                        <option value="school">School</option>
+                        <option value="home">Home</option>
+                        <option value="work">Work</option>
+                        <option value="program">Program</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="large-6 cell">
+                 <ul class="menu vertical documents">
+                  <li><a href="#" target="_blank">tests.pdf</a><a class="delete"><img src="assets/icons/delete.svg"></a></li>
+                </ul>
+                <br />
+                <label for="exampleFileUpload" class="button expanded">Upload Documents</label>
+                <input type="file" id="exampleFileUpload" class="show-for-sr">
+              </div> 
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="large-6 cell">
+                <label>Program Duration
+                  <input type="text" placeholder="Program Duration">
+                </label>
+              </div>
+               <div class="large-3 cell">
+                <label>UCI
+                  <input type="text" placeholder="UCI">
+                </label>
+              </div>
+              <div class="small-3 cell">
+                <label>Active</label>
+                <div class="switch large">
+                  <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
+                  <label class="switch-paddle" for="yes-no">
+                    <span class="switch-active" aria-hidden="true">Yes</span>
+                    <span class="switch-inactive" aria-hidden="true">No</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="large-12 cell">
+                <div class="button-group expanded">
+                  <a class="button">Save</a>
+                  <a class="button secondary">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- Add Client Modal End -->
+    <!-- Edit Staff Modal Begin -->
+    <div class="reveal" id="editClient" data-reveal>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="header">
+        <h2>Edit Client</h2>
+      </div>
+       <form>
+        <div class="grid-container body">
+          <div class="grid-x grid-padding-x">
+            <div class="large-4 cell"></div>
+              <div class="large-4 cell">
+                <img class="profile-photo" src="https://goo.gl/nkJ2ZC"> 
+                <label for="exampleFileUpload" class="button expanded">Staff Photo</label>
+                <input type="file" id="exampleFileUpload" class="show-for-sr">
+              </div>
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="large-6 cell">
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>First Name
+                      <input class="is-invalid-input" type="text" placeholder="First Name">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Last Name
+                      <input type="text" placeholder="First Name">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Date Of Birth
+                      <input type="date" placeholder="Date Of Birth">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Sex</label>
+                    <input type="radio" name="sex" value="Male" id="sexMale" required><label for="sexMale">Male</label>
+                    <input type="radio" name="sex" value="Female" id="sexFemale"><label for="sexFemale">Female</label>
+                  </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="large-6 cell">
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Program Start Date
+                      <input type="date" placeholder="Program Start Date">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Service Coordinator 
+                      <input type="text" placeholder="Service Coordinator">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Allergies
+                      <textarea type="text" placeholder="Allergies" style="height: 95px;"></textarea>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="large-6 cell">
+                <label>Diet
+                  <input type="text" placeholder="Diet">
+                </label>
+              </div>
+              <div class="large-6 cell">
+                <label>Diagnosis
+                  <input type="text" placeholder="Diagnosis">
+                </label>
+              </div> 
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="large-6 cell">
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Medical Record Numbe
+                      <input type="text" placeholder="Medical Record Numbe">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Facility Name
+                      <input type="text" placeholder="Facility Name">
+                    </label>
+                  </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Legend
+                      <select>
+                        <option>Select</option>
+                        <option value="school">School</option>
+                        <option value="home">Home</option>
+                        <option value="work">Work</option>
+                        <option value="program">Program</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="large-6 cell">
+                 <ul class="menu vertical documents">
+                  <li><a href="#" target="_blank">tests.pdf</a><a class="delete"><img src="assets/icons/delete.svg"></a></li>
+                  <li><a href="#" target="_blank">test.pdf</a><a class="delete"><img src="assets/icons/delete.svg"></a></li>
+                  <li><a href="#" target="_blank">test.pdf</a><a class="delete"><img src="assets/icons/delete.svg"></a></li>
+                  <li><a href="#" target="_blank">test.pdf</a><a class="delete"><img src="assets/icons/delete.svg"></a></li>
+                  <li><a href="#" target="_blank">test.pdf</a><a class="delete"><img src="assets/icons/delete.svg"></a></li>
+                </ul>
+                <br />
+                <label for="exampleFileUpload" class="button expanded">Upload Documents</label>
+                <input type="file" id="exampleFileUpload" class="show-for-sr">
+              </div> 
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="large-6 cell">
+                <label>Program Duration
+                  <input type="text" placeholder="Program Duration">
+                </label>
+              </div>
+               <div class="large-3 cell">
+                <label>UCI
+                  <input type="text" placeholder="UCI">
+                </label>
+              </div>
+              <div class="small-3 cell">
+                <label>Active</label>
+                <div class="switch large">
+                  <input class="switch-input" id="no" type="checkbox" name="exampleSwitch">
+                  <label class="switch-paddle" for="no">
+                    <span class="switch-active" aria-hidden="true">Yes</span>
+                    <span class="switch-inactive" aria-hidden="true">No</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="grid-x grid-padding-x">
+              <div class="large-6 cell">
+                <a class="button expanded">Save</a>
+              </div>
+              <div class="large-6 cell">
+                <div class="input-group">
+                  <input placeholder="Type Delete" class="input-group-field" type="text">
+                  <div class="input-group-button">
+                    <input type="submit" class="button alert" value="Delete">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- Edit Staff Modal End -->
+    <!-- Program Report Modal Begin -->
+    <div class="reveal full" id="programReport" data-reveal>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="header">
+        <h2>Program</h2>
+      </div>
+      <form>
+        <div class="grid-container body">
+          <div class="grid-x grid-padding-x">
+            <div class="large-5 cell">
+              <h3><span>Alex Kerkovich</span></h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Program Name</th>
+                    <th>Sub Program Name</th>
+                    <th>Date Created</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="active">
+                    <td><a data-tabs-target="" href="#clientPrograms">Behavioral Component</a></td>
+                    <td>Sub Program 1</td>
+                    <td>[date stamped]</td>
+                  </tr>
+                  <tr>
+                    <td><a data-tabs-target="" href="#clientPrograms">Behavioral Component</a></td>
+                    <td>Sub Program 2</td>
+                    <td>[date stamped]</td>
+                  </tr>
+                  <tr>
+                    <td><a data-tabs-target="" href="#clientPrograms">Behavioral Component</a></td>
+                    <td>Sub Program 3</td>
+                    <td>[date stamped]</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="large-7 cell">
+              <ul class="tabs" data-tabs id="programs">
+                <li class="tabs-title is-active"><a data-tabs-target="" href="#clientPrograms">Client Program</a></li>
+                <li class="tabs-title"><a href="#newProgram" aria-selected="true">Add New Programs</a></li>
+              </ul>
+              <div class="tabs-content" data-tabs-content="programs">
+                <div class="tabs-panel is-active" id="clientPrograms">
+                  <div class="grid-x">
+                    <div class="small-6 large-offset-6 cell">
+                      <div class="button-group float-right"">
+                        <a class="button">Save</a>
+                        <a class="button secondary disabled">Saved</a>
+                      </div>
+                    </div>
+                  </div>
+                  <form>
+                    <div class="grid-x">
+                      <div class="large-12 cell">
+                        <div class="grid-x grid-padding-x">
+                          <div class="large-6 cell">
+                            <label>Program Name</label>
+                              <p>Program Name</p>   
+                          </div>
+                          <div class="large-6 cell">
+                            <label>Sub Program Name
+                              <input type="text" placeholder="Sub Program Name">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="grid-x">
+                          <div class="large-12 cell">
+                            <label>Sub Program Detail</label>
+                            <code>word code goes here</code>
+                          </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="grid-x">
+                          <div class="large-12 cell">
+                            <table>
+                              <thead>
+                                <tr>
+                                  <th>Data</th>
+                                  <th style="width: 250px;"">Admission Baseline</th>
+                                  <th style="width: 100px;">Unit</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><input type="text"></td>
+                                  <td><input type="text" placeholder="Admission Baseline"></td>
+                                  <td><input type="text" placeholder="Unit"></td>
+                                </tr>
+                                <tr>
+                                  <td><input type="text"></td>
+                                  <td><input type="text" placeholder="Admission Baseline"></td>
+                                  <td><input type="text" placeholder="Unit"></td>
+                                </tr>
+                                <tr>
+                                  <td><a class="button small" href="#">Add New</td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tabs-panel" id="newProgram">
+                  <div class="grid-x">
+                    <div class="small-6 large-offset-6 cell">
+                      <div class="button-group float-right"">
+                        <a class="button">Save</a>
+                        <a class="button secondary disabled">Saved</a>
+                      </div>
+                    </div>
+                  </div>
+                  <form>
+                    <div class="grid-x">
+                      <div class="large-12 cell">
+                        <div class="grid-x grid-padding-x">
+                          <div class="large-6 cell">
+                            <label>Program Name
+                              <input type="text" placeholder="Program Name">
+                            </label>
+                          </div>
+                          <div class="large-6 cell">
+                            <label>Sub Program Name
+                              <input type="text" placeholder="Sub Program Name">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="grid-x">
+                          <div class="large-12 cell">
+                            <code>word code goes here</code>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- Edit Staff Modal End -->
+    <!-- Summary Report Modal Begin -->
+    <div class="reveal full" id="summaryReport" data-reveal>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="header">
+        <h2>Summary Report</h2>
+      </div>
+      <form>
+        <div class="grid-container body">
+          <div class="grid-x">
+            <div class="large-12 cell text-center">
+              <h2>Apollo Adult Day Care</h2>
+              <p>303 North 15th St, San Jose, CA, 95112</p>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="large-6 cell">
+              <div class="grid-x grid-margin-x">
+                <div class="large-6 cell">
+                  <div class="grid-x">
+                    <div class="large-12 cell">
+                      <label>Consumer</label>
+                      <p>Client Name</p>
+                      <label>DOB
+                        <input type="date" placeholder="Date">
+                      </label>
+                       <label>DOA
+                        <input type="date" placeholder="Date">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="large-6 cell">
+                  <div class="grid-x">
+                    <div class="large-12 cell">
+                      <label>Date
+                        <input type="date" placeholder="Date">
+                      </label>
+                      <label>Report Prepared By
+                        <input type="text">
+                      </label>
+                      <label>Report Reviewed By
+                        <input type="text">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-x">
+                <div class="large-12 cell">
+                  Comments
+                  <textarea placeholder="Comments"></textarea>
+                </label>
+                </div>
+              </div>
+            </div>
+            <div class="large-6 cell">
+              <div class="grid-x grid-padding-x">
+                <div class="large-12 cell">
+                  <label>Team Members</label>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style="width: 50%;">Name/Agency</th>
+                        <th>Signature</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input type="text">
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="text">
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="text">
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="text">
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="text">
+                        </td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="large-12 cell">
+              <code>program data goes here</code>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+          <div class="grid-x">
+            <div class="large-12 cell">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Admission Baseline</th>
+                    <th>1st Quarter</th>
+                    <th>2nd Quarter</th>
+                    <th>3rd Quarter</th>
+                    <th>4th Quarter</th>
+                    <th>Anual Average</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Date</th>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th><code>subprogram name</code></th>
+                    <td></td>
+                    <td></td> 
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="grid-x">
+            <div class="large-12 cell text-center">
+              <a class="button large" onclick="myFunction()">Print this page</a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- Summary Report Modal End -->
+  </head>
+ <body id="adminClients" class="app panels-layout">
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="medium-1 cell">
+        <div class="sidebar">
+          <div class="header">
+            <img src="assets/logo.white.png">
+          </div>
+          <ul class="vertical menu">
+            <li><a class="staff" href="admin-staff.html" class="staff">Staff</a></li>
+            <li><a class="active client" href="#">Client</a></li>
+            <li><a class="assign" href="admin-client-staff-management.html">Staff-Client</a></li> 
+            <li><a class="medication" href="admin-medications.html"">Medication</a></li>
+          </ul>
+           <ul class="vertical menu logout">
+            <li><a href="#" class="out">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="medium-11 cell sec-nav full-height">
+        <div class="user">
+          <p>Welcome, <span>Bianca!</span><img src="https://pbs.twimg.com/profile_images/2325809302/bkm0xkf5hz3huqk6pfb3.png">
+        </div>
+        <div class="grid-container">
+          <div class="menu">
+            <div class="grid-x grid-margin-x" style="width: 100%;">
+              <div class="medium-12 cell">
+                <ul class="menu">
+                  <li>
+                    <div class="button-group">
+                    <a class="button" data-open="addClient">Add New Client</a>
+                  </li>
+                  <li>
+                    <button class="dropdown button secondary" type="button" data-toggle="example-dropdown-1">Arrange By</button>
+                    <div class="dropdown-pane small" id="example-dropdown-1" data-dropdown data-hover="true" data-hover-pane="true">
+                      <a href="#">First Name</a>
+                      <a href="#">Last Name</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="input-group">
+                      <input class="input-group-field" type="text" placeholder="Search By Name">
+                      <div class="input-group-button">
+                        <input type="submit" class="button" value="Search">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="cell auto">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-container content">
+          <div class="grid-x grid-padding-x medium-up-2 large-up-3">
+            <div class="cell">
+              <div class="callout">
+                <div class="profile-photo" style="background: url(https://goo.gl/nkJ2ZC")></div>
+                <h2><span>Alex</span> <span>Kerkovich</span></h2>
+                <div class="grid-x">
+                  <div class="small-6 cell">
+                    <p class="title">Program Start Date</p>
+                    <span>2017-01-10</span>
+                  </div>
+                  <div class="small-6 cell supervising-doctor ">
+                    <p class="title">Service Coordinator</p>
+                    <span>Michael Urata</span>
+                  </div>
+                </div>  
+                <br />
+                <div class="grid-x small-up-3 training">
+                  <div class="cell">
+                    <p class="title">Program</p>
+                    <a href="#" data-open="programReport"><span>Report</span></a>
+                  </div>
+                  <div class="cell">
+                    <p class="title">Tracking Report</p>
+                    <a href="#"><span>Tracking</span></a>
+                  </div>
+                  <div class="cell">
+                    <p class="title">Summary</p>
+                    <a href="#" data-open="summaryReport"><span>Report</span></a>
+                  </div>
+                </div>
+                <a href="#" class="button expanded edit" data-open="editClient"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      $('app').height(window.innerHeight + 'px');
+
+      function myFunction() {
+        window.print();
+      }
+    </script>
+
+  </body>
+</html>
